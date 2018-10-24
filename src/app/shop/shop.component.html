@@ -1,0 +1,21 @@
+
+
+<div class="flex">
+
+  <div class="items-grid">
+
+    <div class="item" *ngFor="let item of shopItems; let i = index">
+
+      <div class="border-box clickable" (click)="goToItem(item.id)">
+        <h4>
+          <span class="left-floated">{{item.name}}</span>
+          <span class="right-floated">{{item.price | currency}}</span>
+        </h4>
+        <img src="https://via.placeholder.com/200x150">
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

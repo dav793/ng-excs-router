@@ -1,0 +1,13 @@
+
+.right-floated {
+  float: right;
+}
+
+.cart-list {
+  max-width: 400px;
+  list-style: none;
+}
+
+.bold {
+  font-weight: bold;
+}

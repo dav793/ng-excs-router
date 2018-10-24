@@ -1,0 +1,14 @@
+
+<h2>My Cart</h2>
+
+<ul class="cart-list">
+  <li *ngFor="let item of getCartItems()">
+    {{ item.item.name }} ({{ item.quantity }})
+    <span class="right-floated">{{ item.item.price * item.quantity | currency }}</span>
+  </li>
+  <br />
+  <li class="bold">TOTAL <span class="right-floated">{{ getTotal() | currency }}</span></li>
+</ul>
+
+<button (click)="pay()">Pay now</button>
+<button (click)="clearCart()">Clear all</button>

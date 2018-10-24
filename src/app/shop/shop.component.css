@@ -1,0 +1,32 @@
+.flex {
+  display: flex;
+}
+
+.items-grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  padding: 20px;
+}
+
+.border-box {
+  max-width: 215px;
+}
+
+.left-floated {
+  float: left;
+}
+
+.right-floated {
+  float: right;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  opacity: 0.8;
+}
