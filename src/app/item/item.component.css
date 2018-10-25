@@ -1,0 +1,12 @@
+
+.border-box {
+  width: 400px;
+}
+
+.right-floated {
+  float: right;
+}
+
+.center {
+  text-align: center;
+}

@@ -22,7 +22,12 @@ ul li:hover {
   background-color: #ededed;
 }
 
-ul li:focus, ul li:active {
+ul li:focus, ul li:active, ul li.active {
   background-color: #505050;
   color: #ffffff;
 }
+
+.right-floated {
+  float: right;
+}
+

@@ -1,14 +1,22 @@
 
-<div *ngIf="item">
+<div *ngIf="item" class="border-box">
 
   <h2>Item: {{ item.name }}</h2>
-  <h3>Price: {{ item.price | currency }}</h3>
+  <h3>
+    Price: {{ item.price | currency }}
+    <button *ngIf="isLoggedIn()" (click)="addToCart()" class="right-floated">Add to cart</button>
+  </h3>
+
+  <div class="center">
+    <p *ngFor="let message of messages">{{ message }}</p>
+  </div>
+
   <img src="https://via.placeholder.com/400x300">
 
 </div>
 
-<div *ngIf="!item">
-  <p>nothing to show</p>
+<div *ngIf="!item" class="border-box">
+  <p class="center">nothing to show</p>
 </div>
 
 

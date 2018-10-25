@@ -1,7 +1,10 @@
 
 <nav>
   <ul>
-    <li>Shop</li>
-    <li>My Cart</li>
+    <li routerLink="/shop" routerLinkActive="active">Shop</li>
+    <li routerLink="/cart" routerLinkActive="active">My Cart</li>
+    <li *ngIf="getLoggedUser() === null" class="right-floated" (click)="logIn()">Log In</li>
+    <li *ngIf="getLoggedUser() !== null" class="right-floated" (click)="logOut()">Log Out</li>
+    <li *ngIf="getLoggedUser() !== null" class="right-floated">Hi, {{ getLoggedUser().username }}</li>
   </ul>
 </nav>

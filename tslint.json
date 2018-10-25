@@ -84,7 +84,7 @@
     ],
     "prefer-const": false,
     "quotemark": false,
-    "radix": true,
+    "radix": false,
     "semicolon": [
       true,
       "always"

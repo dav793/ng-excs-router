@@ -1,5 +1,17 @@
 
 
+<br />
+
+<label>
+  Show from
+  <input type="text" [(ngModel)]="showFrom" (input)="rangeChange(showFrom, showTo)"/>
+</label>
+&nbsp;
+<label>
+  To
+  <input type="text" [(ngModel)]="showTo" (input)="rangeChange(showFrom, showTo)"/>
+</label>
+
 <div class="flex">
 
   <div class="items-grid">

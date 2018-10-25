@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
-import { ShopService } from "../shop.service";
-import {Item} from "../item";
+import { UserService } from "../user/user.service";
+import { ShopService } from "../shop/shop.service";
+import { Item } from "./item";
 
 @Component({
   selector: 'app-item',
@@ -10,13 +12,30 @@ import {Item} from "../item";
 })
 export class ItemComponent implements OnInit {
 
-  itemId = '1';
+  itemId;
   item: Item;
+  messages: string[] = [];
 
-  constructor(private shopService: ShopService) { }
+  constructor(
+    private userService: UserService,
+    private shopService: ShopService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
-    this.item = this.shopService.getItem(this.itemId);
+    this.itemId = this.route.snapshot.paramMap.get('id');
+
+    if (this.itemId)
+      this.item = this.shopService.getItem(this.itemId);
+  }
+
+  addToCart() {
+    this.shopService.addItemToCart(this.item);
+    this.messages.push('added to cart');
+  }
+
+  isLoggedIn(): boolean {
+    return this.userService.isLoggedIn();
   }
 
 }
