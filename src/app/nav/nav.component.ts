@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
 
 import { UserService } from "../user/user.service";
 import { User } from "../user/user";
@@ -12,8 +11,7 @@ import { User } from "../user/user";
 export class NavComponent {
 
   constructor(
-    private userService: UserService,
-    private router: Router
+    private userService: UserService
   ) { }
 
   getLoggedUser(): User|null {
@@ -26,7 +24,6 @@ export class NavComponent {
 
   logOut() {
     this.userService.logOutUser();
-    this.router.navigate(['/']);
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 
 import { UserService } from "../user/user.service";
 import { ShopService } from "../shop/shop.service";
@@ -12,20 +11,16 @@ import { Item } from "./item";
 })
 export class ItemComponent implements OnInit {
 
-  itemId;
+  itemId = '1';
   item: Item;
   messages: string[] = [];
 
   constructor(
     private userService: UserService,
-    private shopService: ShopService,
-    private route: ActivatedRoute,
-    private router: Router
+    private shopService: ShopService
   ) { }
 
   ngOnInit() {
-    this.itemId = this.route.snapshot.paramMap.get('id');
-
     if (this.itemId)
       this.item = this.shopService.getItem(this.itemId);
   }
@@ -39,12 +34,8 @@ export class ItemComponent implements OnInit {
     return this.userService.isLoggedIn();
   }
 
-  goToPicture() {
-    this.router.navigate(['item', this.itemId, 'picture']);
-  }
+  goToPicture() {}
 
-  goToRating() {
-    this.router.navigate(['item', this.itemId, 'rating']);
-  }
+  goToRating() {}
 
 }
