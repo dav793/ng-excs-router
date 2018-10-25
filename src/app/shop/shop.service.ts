@@ -12,52 +12,62 @@ export class ShopService {
     {
       id: '1',
       name: 'Salsa Lizano',
-      price: 3
+      price: 3,
+      rating: 5
     },
     {
       id: '2',
       name: 'Pato de hule',
-      price: 0.50
+      price: 0.50,
+      rating: 4
     },
     {
       id: '3',
       name: 'Helado de vainilla',
-      price: 2
+      price: 2,
+      rating: 3
     },
     {
       id: '4',
       name: 'Cepillo de dientes',
-      price: 2
+      price: 2,
+      rating: 4
     },
     {
       id: '5',
       name: 'Lata de frijoles',
-      price: 2.50
+      price: 2.50,
+      rating: 2
     },
     {
       id: '6',
       name: 'Lechuga',
-      price: 0.99
+      price: 0.99,
+      rating: 3
     },
     {
       id: '7',
       name: 'Pan cuadrado',
-      price: 3
+      price: 3,
+      rating: 2
     },
     {
       id: '8',
       name: 'Queso',
-      price: 4
+      price: 4,
+      rating: 5
     },
     {
       id: '9',
       name: 'Jamon',
-      price: 5
+      price: 5,
+      rating: 4
     },
     {
       id: '10',
       name: 'Desodorante',
-      price: 3.50
+      price: 3.50,
+      rating: 5
     }
   ];
 

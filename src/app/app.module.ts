@@ -7,8 +7,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { ShopComponent } from './shop/shop.component';
-import { ItemComponent } from './item/item.component';
 import { CartComponent } from './cart/cart.component';
+import { ItemComponent } from './item/item.component';
+import { RatingComponent } from './item/rating/rating.component';
+import { PictureComponent } from './item/picture/picture.component';
 
 import { ShopService } from "./shop/shop.service";
 import { UserService } from "./user/user.service";
@@ -16,10 +18,12 @@ import { UserService } from "./user/user.service";
 @NgModule({
   declarations: [
     AppComponent,
+    NavComponent,
     ShopComponent,
     ItemComponent,
     CartComponent,
-    NavComponent
+    RatingComponent,
+    PictureComponent
   ],
   imports: [
     BrowserModule,

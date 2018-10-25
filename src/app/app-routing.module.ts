@@ -7,6 +7,8 @@ import { CartComponent } from "./cart/cart.component";
 
 import { CanActivateCartGuard } from "./cart/can-activate-cart.guard";
 import { CanDeactivateCartGuard } from "./cart/can-deactivate-cart.guard";
+import {PictureComponent} from "./item/picture/picture.component";
+import {RatingComponent} from "./item/rating/rating.component";
 
 const routes: Routes = [
   { path: 'shop', component: ShopComponent },
@@ -16,7 +18,10 @@ const routes: Routes = [
     canActivate: [CanActivateCartGuard],
     canDeactivate: [CanDeactivateCartGuard]
   },
-  { path: 'item/:id', component: ItemComponent },
+  { path: 'item/:id', component: ItemComponent, children: [
+      { path: 'picture', component: PictureComponent },
+      { path: 'rating', component: RatingComponent }
+    ] },
   { path: '', redirectTo: '/shop', pathMatch: 'full' },
 ];
 

@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
  *  - Como puedo prohibir la activacion de la ruta de CartComponent si el usuario no esta logged in?
  *  - Como puedo prohibir la desactivacion de la ruta de CartComponent si el carrito no esta vacio?
  *  - Como puedo proveer multiples variables mediante una ruta, sin importar su orden u ausencia? (query strings)
+ *  - Como puedo configurar rutas multi-nivel? (child routes)
  *
  */
 

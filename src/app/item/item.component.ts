@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { UserService } from "../user/user.service";
 import { ShopService } from "../shop/shop.service";
@@ -19,7 +19,8 @@ export class ItemComponent implements OnInit {
   constructor(
     private userService: UserService,
     private shopService: ShopService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -36,6 +37,14 @@ export class ItemComponent implements OnInit {
 
   isLoggedIn(): boolean {
     return this.userService.isLoggedIn();
+  }
+
+  goToPicture() {
+    this.router.navigate(['item', this.itemId, 'picture']);
+  }
+
+  goToRating() {
+    this.router.navigate(['item', this.itemId, 'rating']);
   }
 
 }

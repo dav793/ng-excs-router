@@ -11,7 +11,11 @@
     <p *ngFor="let message of messages">{{ message }}</p>
   </div>
 
-  <img src="https://via.placeholder.com/400x300">
+  <button (click)="goToPicture()">Show picture</button>
+  <button (click)="goToRating()">Show rating</button>
+  <br /><br />
+
+  <router-outlet></router-outlet>
 
 </div>
 
