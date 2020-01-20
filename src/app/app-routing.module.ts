@@ -8,11 +8,11 @@ import { RatingComponent } from "./item/rating/rating.component";
 const routes: Routes = [
   {
     path: 'shop',
-    loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)
+    loadChildren: './shop/shop.module#ShopModule'
   },
   {
     path: 'cart',
-    loadChildren: () => import('./cart/cart.module').then(m => m.CartModule)
+    loadChildren: './cart/cart.module#CartModule'
   },
   { path: 'item/:id', component: ItemComponent, children: [
       { path: 'picture', component: PictureComponent },

@@ -26,9 +26,7 @@ import { UserService } from "./user/user.service";
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule,
-    ShopModule,
-    CartModule
+    AppRoutingModule
   ],
   providers: [
     ShopService,
